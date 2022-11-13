@@ -214,7 +214,7 @@ class _Screen1State extends State<Screen1> {
                   }, child: Text(pickedFile != null ? pickedFile!.name : "Select Image")),
                     
                     ElevatedButton(onPressed: (){
-                    if(isValid()){
+                    if(_formKey.currentState!.validate()){
                       setState(() {
                         isLoading = true;
                         uploadFile();
